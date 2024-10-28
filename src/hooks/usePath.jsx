@@ -3,4 +3,5 @@ export const PATH = {
     popoular: '/popular',
     topRated: '/top-rated',
     upComing: '/up-coming',
+    singleMovie: '/movie/:id'
 };

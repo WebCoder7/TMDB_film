@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { PATH } from '../hooks/usePath'
-import { NowPlaying, Popular, TopRated, UpComing } from '../pages'
+import { NowPlaying, Popular, SingleMovie, TopRated, UpComing  } from '../pages'
 
 function CustomRoutes() {
     const routeList = [
@@ -23,12 +23,21 @@ function CustomRoutes() {
             id: 4,
             path: PATH.upComing,
             element: <UpComing />
+        },{
+            id: 5,
+            path: PATH.singleMovie,
+            element: <SingleMovie />
         },
     ]
 
     return (
         <Routes>
-            {routeList.map(item => <Route key={item.id} path={item.path} element={item.element} />)}
+            {routeList.map(item =>
+                <Route
+                    key={item.id}
+                    path={item.path}
+                    element={item.element}
+                />)}
         </Routes>
     )
 }
